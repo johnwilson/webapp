@@ -1,0 +1,37 @@
+appname = "Example"
+
+[static]
+dir = "public"
+prefix   = "/static"
+index = "index.html"
+logging = false
+
+[cookie]
+mac_secret = "secret string which has over 256-bit entropy"
+secure     = false
+
+[csrf]
+key    = "csrf_token"
+cookie = "XSRF-TOKEN"
+header = "X-XSRF-TOKEN"
+
+[render]
+dir = "templates"
+ext = [".tmpl",".html"]
+layout = "base/layout"
+dev = true
+
+[sqldb]
+driver = "sqlite3"
+connstring = "test.db"
+max_idle = 10
+max_conn = 100
+
+[redis]
+server = "127.0.0.1:6379"
+password = ""
+
+[mail]
+smtp = ""
+email = ""
+password = ""
